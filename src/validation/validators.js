@@ -13,9 +13,7 @@ const validword=function(name){
     return /\d/.test(String)
   }
 
-  const isValidPincode = (num) => {
-    return /^[0-9]{6}$/.test(num);
-  }
+  
   
   const isValidPhone = (Mobile) => {
     return /^[6-9]\d{9}$/.test(Mobile)
@@ -29,25 +27,6 @@ const validword=function(name){
     return /^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,15}$/.test(Password)
   }
 
-  const isValidSize = (size) => {
-    let correctTitle = ["S", "XS","M","X", "L","XXL", "XL"];
-        if (correctTitle.includes(size)) {
-          return true
-        } else {
-          return false
-        }
-      }
-  function isValidPrice(input){
-        var RE = /^-{0,1}\d*\.{0,1}\d+$/;
-        return (RE.test(input));
-      }
-      const isValidStatus = (size) => {
-        let status = ["pending", "completed", "canceled"];
-            if (status.includes(size)) {
-              return true
-            } else {
-              return false
-            }
-          }
+  
 
-  module.exports={validword,isValidObjectId,isValidPincode ,isValidString,isValidPhone,isValidEmail,isValidPswd,isValidSize,isValidPrice,isValidStatus}
+  module.exports={validword,isValidObjectId ,isValidString,isValidPhone,isValidEmail,isValidPswd}
